@@ -5,7 +5,7 @@
 npm install apidoc -g
 ```
 
-* Run in this folder
+* Run in the "server" folder
 ```
 apidoc -i src/ -o ./
 ```
