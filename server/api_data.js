@@ -1123,14 +1123,14 @@ define({ "api": [
           },
           {
             "group": "Success 200",
-            "type": "String",
+            "type": "Int",
             "optional": false,
             "field": "data.stored",
             "description": "<p>Global data stored (in B).</p>"
           },
           {
             "group": "Success 200",
-            "type": "String",
+            "type": "Int",
             "optional": false,
             "field": "data.quota",
             "description": "<p>Global user storage (in B).</p>"
@@ -1346,7 +1346,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/Home/languages",
+    "url": "/home/languages",
     "title": "Get available languages",
     "name": "GetHomeLanguages",
     "group": "Home",
@@ -1364,7 +1364,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "src/Home.coffee",
+    "filename": "src/home.coffee",
     "groupTitle": "Home"
   },
   {
@@ -3006,15 +3006,8 @@ define({ "api": [
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "token",
-            "description": "<p>Current token.</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
             "field": "message",
-            "description": "<p>Password has been updated.</p>"
+            "description": "<p>&quot;removeToken&quot;. Token has to be removed from client.</p>"
           }
         ]
       }
