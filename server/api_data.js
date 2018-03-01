@@ -85,6 +85,13 @@ define({ "api": [
             "optional": true,
             "field": "version",
             "description": "<p>Browser version.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Message.</p>"
           }
         ]
       }

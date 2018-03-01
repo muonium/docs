@@ -19,6 +19,7 @@
 @apiParam 								{String} os 		Operating system.
 @apiParam 								{String} browser 	Browser.
 @apiParam 								{String} [version] 	Browser version.
+@apiParam 								{String} message 	Message.
 
 @apiSuccess (Success 200 - sent) 		{String} token		Current token.
 @apiSuccess (Success 200 - sent) 		{String} message	"sent". Bug report sent.
