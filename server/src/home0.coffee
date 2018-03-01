@@ -1,5 +1,5 @@
 ###
-@api 		{get} 		/Home/languages 	Get available languages
+@api 		{get} 		/home/languages 	Get available languages
 @apiName 	GetHomeLanguages
 @apiGroup 	Home
 
