@@ -8,8 +8,23 @@
 @apiParam 								{String} 	name 					Folder name.
 @apiParam 								{Int} 		folder_id 				Folder ID where folder will be created.
 
+@apiParamExample {json} Request-Example:
+{
+	"name": "myfolder",
+	"folder_id": 0
+}
+
 @apiSuccess (Success 201) 				{String} 	token					Current token.
 @apiSuccess (Success 201) 				{String} 	data					Folder ID.
+
+@apiSuccessExample {json} Success-Response:
+{
+    "code": 201,
+    "status": "success",
+    "data": 11,
+    "message": null,
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1MTk4OTI3MTMsImV4cCI6MTU1MTQyODcxMywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSJ9._PWCLR7lgLmX3qA3gVnAhyGj-wt3WjDeNaml_tOunJM"
+}
 
 @apiError 	(Error 400 - exists) 		{String} 	token					Current token.
 @apiError 	(Error 400 - exists)		{String} 	message					"exists". This folder already exists.
@@ -65,4 +80,71 @@
 @apiSuccess (Success 200) 				{String} 	data.folders.path		Path.
 @apiSuccess (Success 200) 				{Int} 		data.folders.parent		Parent folder ID.
 @apiSuccess (Success 200) 				{Int} 		data.folders.nb_elements Number of elements.
+
+@apiSuccessExample {json} Success-Response:
+{
+    "code": 200,
+    "status": "success",
+    "data": {
+        "path": "",
+        "title": "Home",
+        "stored": 1868896678,
+        "quota": 2000000000,
+        "folders": [
+            {
+                "id": 1,
+                "name": "mui",
+                "size": 14445384,
+                "path": "",
+                "parent": 0,
+                "nb_elements": 10
+            },
+            {
+                "id": 10,
+                "name": "myfolder",
+                "size": 1685600766,
+                "path": "",
+                "parent": 0,
+                "nb_elements": 12
+            }
+        ],
+        "files": [
+            {
+                "id": 9,
+                "is_shared": true,
+                "name": "image.jpg",
+                "folder_id": 0,
+                "path": "",
+                "is_completed": true,
+                "size": 7811581,
+                "lastmod": 1519824137,
+                "url": "http://localhost/server/dl/?OQ"
+            },
+            {
+                "id": 14,
+                "is_shared": false,
+                "name": "image2.jpg",
+                "folder_id": 0,
+                "path": "",
+                "is_completed": true,
+                "size": 9209782,
+                "lastmod": 1517567397,
+                "url": "http://localhost/server/dl/?MTQ"
+            },
+            {
+                "id": 15,
+                "is_shared": true,
+                "name": "video.mp4",
+                "folder_id": 0,
+                "path": "",
+                "is_completed": true,
+                "size": 7182501,
+                "lastmod": 1517246641,
+                "url": "http://localhost/server/dl/?MTU"
+            }
+        ]
+    },
+    "message": null,
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1MTk4OTI3MTMsImV4cCI6MTU1MTQyODcxMywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSJ9._PWCLR7lgLmX3qA3gVnAhyGj-wt3WjDeNaml_tOunJM"
+}
 ###

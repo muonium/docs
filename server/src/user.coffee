@@ -12,6 +12,21 @@
 @apiSuccess (Success 200) 				{String} 	data.email				Email address.
 @apiSuccess (Success 200) 				{Int} 	 	data.registration_date	Registration date (timestamp).
 @apiSuccess (Success 200) 				{Boolean}	data.double_auth		2-factor authentication enabled?
+
+@apiSuccessExample {json} Success-Response:
+{
+    "code": 200,
+    "status": "success",
+    "data": {
+        "id": 1,
+        "login": "muonium",
+        "email": "muonium@muonium.ee",
+        "registration_date": 1517233312,
+        "double_auth": true
+    },
+    "message": null,
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1MTk4OTI3MTMsImV4cCI6MTU1MTQyODcxMywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSJ9._PWCLR7lgLmX3qA3gVnAhyGj-wt3WjDeNaml_tOunJM"
+}
 ###
 
 ###

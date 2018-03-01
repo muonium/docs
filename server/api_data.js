@@ -242,7 +242,14 @@ define({ "api": [
             "description": "<p>DK.</p>"
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"code\": 200,\n    \"status\": \"success\",\n    \"data\": {\n        \"uid\": 1,\n        \"login\": \"muonium\",\n        \"name\": \"image.jpg\",\n        \"size\": 7182501,\n        \"folder_id\": 10,\n        \"fid\": 9,\n        \"last_modification\": 1517246641,\n        \"dk\": \"ii0NdmwLXNXESMX5gqhUaXIhxYYS9OyZ5hoBBnXBTqZJJt8mNlHTvWG1E51Ua8b6:uITDWS7MpbCAJmgnzkNJOL==:gZKicsNMWPIAarNfcClvMQ==:H/pybbnUp9WQt13E22y1TQ==\"\n    },\n    \"message\": null,\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1MTk4OTI3MTMsImV4cCI6MTU1MTQyODcxMywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSJ9._PWCLR7lgLmX3qA3gVnAhyGj-wt3WjDeNaml_tOunJM\"\n}",
+          "type": "json"
+        }
+      ]
     },
     "error": {
       "fields": {
@@ -319,7 +326,14 @@ define({ "api": [
             "description": "<p>Line/Chunk number (0: first).</p>"
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n\"uid\": 1,\n\"filename\": \"image.jpg\",\n\"folder_id\": 10,\n\"line\": 0\n}",
+          "type": "json"
+        }
+      ]
     },
     "success": {
       "fields": {
@@ -499,7 +513,14 @@ define({ "api": [
             "description": "<p>Line/Chunk number (0: first).</p>"
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n\"filename\": \"image.jpg\",\n\"folder_id\": 10,\n\"line\": 0\n}",
+          "type": "json"
+        }
+      ]
     },
     "success": {
       "fields": {
@@ -845,7 +866,14 @@ define({ "api": [
             "description": "<p>Filesize.</p>"
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n\"filename\": \"not_completed.mp4\",\n\"folder_id\": 0,\n\"filesize\": 512824\n}",
+          "type": "json"
+        }
+      ]
     },
     "success": {
       "fields": {
@@ -879,7 +907,14 @@ define({ "api": [
             "description": "<p>If file is not completed, last line number (0: first).</p>"
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"code\": 200,\n    \"status\": \"success\",\n    \"data\": {\n        \"status\": 1,\n        \"line\": 0\n    },\n    \"message\": null,\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1MTk4OTI3MTMsImV4cCI6MTU1MTQyODcxMywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSJ9._PWCLR7lgLmX3qA3gVnAhyGj-wt3WjDeNaml_tOunJM\"\n}",
+          "type": "json"
+        }
+      ]
     },
     "error": {
       "fields": {
@@ -1005,7 +1040,14 @@ define({ "api": [
             "description": "<p>Folder ID where folder will be created.</p>"
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n\"name\": \"myfolder\",\n\"folder_id\": 0\n}",
+          "type": "json"
+        }
+      ]
     },
     "success": {
       "fields": {
@@ -1025,7 +1067,14 @@ define({ "api": [
             "description": "<p>Folder ID.</p>"
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"code\": 201,\n    \"status\": \"success\",\n    \"data\": 11,\n    \"message\": null,\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1MTk4OTI3MTMsImV4cCI6MTU1MTQyODcxMywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSJ9._PWCLR7lgLmX3qA3gVnAhyGj-wt3WjDeNaml_tOunJM\"\n}",
+          "type": "json"
+        }
+      ]
     },
     "error": {
       "fields": {
@@ -1255,7 +1304,14 @@ define({ "api": [
             "description": "<p>Number of elements.</p>"
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"code\": 200,\n    \"status\": \"success\",\n    \"data\": {\n        \"path\": \"\",\n        \"title\": \"Home\",\n        \"stored\": 1868896678,\n        \"quota\": 2000000000,\n        \"folders\": [\n            {\n                \"id\": 1,\n                \"name\": \"mui\",\n                \"size\": 14445384,\n                \"path\": \"\",\n                \"parent\": 0,\n                \"nb_elements\": 10\n            },\n            {\n                \"id\": 10,\n                \"name\": \"myfolder\",\n                \"size\": 1685600766,\n                \"path\": \"\",\n                \"parent\": 0,\n                \"nb_elements\": 12\n            }\n        ],\n        \"files\": [\n            {\n                \"id\": 9,\n                \"is_shared\": true,\n                \"name\": \"image.jpg\",\n                \"folder_id\": 0,\n                \"path\": \"\",\n                \"is_completed\": true,\n                \"size\": 7811581,\n                \"lastmod\": 1519824137,\n                \"url\": \"http://localhost/server/dl/?OQ\"\n            },\n            {\n                \"id\": 14,\n                \"is_shared\": false,\n                \"name\": \"image2.jpg\",\n                \"folder_id\": 0,\n                \"path\": \"\",\n                \"is_completed\": true,\n                \"size\": 9209782,\n                \"lastmod\": 1517567397,\n                \"url\": \"http://localhost/server/dl/?MTQ\"\n            },\n            {\n                \"id\": 15,\n                \"is_shared\": true,\n                \"name\": \"video.mp4\",\n                \"folder_id\": 0,\n                \"path\": \"\",\n                \"is_completed\": true,\n                \"size\": 7182501,\n                \"lastmod\": 1517246641,\n                \"url\": \"http://localhost/server/dl/?MTU\"\n            }\n        ]\n    },\n    \"message\": null,\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1MTk4OTI3MTMsImV4cCI6MTU1MTQyODcxMywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSJ9._PWCLR7lgLmX3qA3gVnAhyGj-wt3WjDeNaml_tOunJM\"\n}",
+          "type": "json"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "src/folders.coffee",
@@ -1361,7 +1417,14 @@ define({ "api": [
             "description": "<p>An object containing languages (key: code, value: language name)</p>"
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"code\": 200,\n    \"status\": \"success\",\n    \"data\": {\n        \"en\": \"English\",\n        \"de\": \"Deutsch\",\n        \"es\": \"Español\",\n        \"fr\": \"Français\",\n        \"it\": \"Italiano\",\n        \"pl\": \"Polskie\",\n        \"ru\": \"Русский\",\n        \"zh-cn\": \"简体中文\"\n    },\n    \"message\": null,\n    \"token\": null\n}",
+          "type": "json"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "src/home.coffee",
@@ -1618,14 +1681,14 @@ define({ "api": [
           },
           {
             "group": "Parameter",
-            "type": "Array",
+            "type": "Int[]",
             "optional": false,
             "field": "files",
             "description": "<p>Array of files ID from old_folder to move (they must not be in the trash).</p>"
           },
           {
             "group": "Parameter",
-            "type": "Array",
+            "type": "Int[]",
             "optional": false,
             "field": "folders",
             "description": "<p>Array of folders ID from old_folder to move (they must not be in the trash).</p>"
@@ -1645,7 +1708,14 @@ define({ "api": [
             "description": "<p>Move to this folder ID.</p>"
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n\"copy\": 1,\n\"files\": [1, 4, 8],\n\"folders\": [10],\n\"old_folder_id\": 1,\n\"folder_id\": 2\n}",
+          "type": "json"
+        }
+      ]
     },
     "success": {
       "fields": {
@@ -1673,7 +1743,7 @@ define({ "api": [
           },
           {
             "group": "Success 200",
-            "type": "Array",
+            "type": "String[]",
             "optional": false,
             "field": "data.warning",
             "description": "<p>Can contains some warnings. &quot;badFilename&quot;: unable to find at least one file, &quot;badFoldername&quot;: unable to find at least one folder, &quot;move&quot;: unable to move at least one file/folder, &quot;copy&quot;: unable to copy at least one file/folder, &quot;isAChild&quot;: unable to move to dest folder because it is a child of cut folder.</p>"
@@ -2234,14 +2304,14 @@ define({ "api": [
         "Parameter": [
           {
             "group": "Parameter",
-            "type": "Array",
+            "type": "Int[]",
             "optional": false,
             "field": "files",
             "description": "<p>Array of file ID to move.</p>"
           },
           {
             "group": "Parameter",
-            "type": "Array",
+            "type": "Int[]",
             "optional": false,
             "field": "folders",
             "description": "<p>Array of folder ID to move.</p>"
@@ -2297,14 +2367,14 @@ define({ "api": [
         "Parameter": [
           {
             "group": "Parameter",
-            "type": "Array",
+            "type": "Int[]",
             "optional": false,
             "field": "files",
             "description": "<p>Array of file ID to move.</p>"
           },
           {
             "group": "Parameter",
-            "type": "Array",
+            "type": "Int[]",
             "optional": false,
             "field": "folders",
             "description": "<p>Array of folder ID to move.</p>"
@@ -2429,7 +2499,14 @@ define({ "api": [
             "description": "<p>0: no, 1: yes.</p>"
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"code\": 200,\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"txn_id\": \"XDGHGTFHHBTH\",\n            \"size\": \"10000000000\",\n            \"price\": 4,\n            \"currency\": \"EUR\",\n            \"start\": 0,\n            \"end\": 1525104943,\n            \"removed\": 0,\n            \"currency_symbol\": \"€\"\n        },\n        {\n            \"txn_id\": \"XDGHGTFHHBTT\",\n            \"size\": \"10000000000\",\n            \"price\": 4,\n            \"currency\": \"EUR\",\n            \"start\": 0,\n            \"end\": 1525104943,\n            \"removed\": 0,\n            \"currency_symbol\": \"€\"\n        }\n    ],\n    \"message\": null,\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1MTk4OTI3MTMsImV4cCI6MTU1MTQyODcxMywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSJ9._PWCLR7lgLmX3qA3gVnAhyGj-wt3WjDeNaml_tOunJM\"\n}",
+          "type": "json"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "src/upgrade.coffee",
@@ -2539,7 +2616,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n\"code\": 200,\n\"status\": \"success\",\n\"data\": {\n\"endpoint\": \"https://www.coinpayments.net/index.php\",\n\"plans\": [\n{\n\"size\": \"10000000000\",\n\"price\": 4,\n\"currency\": \"eur\",\n\"duration\": 6,\n\"product_id\": \"PGVG4FRY3EDKG\",\n\"fields\": {\n\"cmd\": \"_pay_simple\",\n\"merchant\": \"2df67e134da679931d3cd7baa62496d0\",\n\"item_name\": \"10 GB - 4 EUR - 6 months\",\n\"item_number\": \"PGVG4FRY3EDKG\",\n\"currency\": \"eur\",\n\"amountf\": 4,\n\"ipn_url\": \"https://mui.cloud/core/IPN\",\n\"success_url\": \"http://localhost/server/upgrade/?success=ok\",\n\"cancel_url\": \"\",\n\"custom\": null,\n\"want_shipping\": \"0\"\n}\n}\n]\n},\n\"message\": null,\n\"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzM4NCJ9.eyJpYXQiOjE1MTg3Njk4NjUsImp0aSI6InB0SFhYbm1QS1lcL0plaUNQUTRncjZyY1lcL0ROMU55R2hLOVNkK3REZTF0UT0iLCJpc3MiOiJsb2NhbGhvc3QiLCJuYmYiOjE1MTg3Njk4NjUsImV4cCI6MTUxODc3MTA2NSwiZGF0YSI6eyJ1aWQiOjd9fQ.obS-Ow3jFFPT0sfUupt8l6ndD-l6VY58Ex0wtRreCoT-FyQUBWedtDQI_vGDsxfg\"\n}",
+          "content": "{\n\"code\": 200,\n\"status\": \"success\",\n\"data\": {\n\"endpoint\": \"https://www.coinpayments.net/index.php\",\n\"plans\": [\n{\n\"size\": \"10000000000\",\n\"price\": 4,\n\"currency\": \"eur\",\n\"duration\": 6,\n\"product_id\": \"PGVG4FRY3EDKG\",\n\"fields\": {\n\"cmd\": \"_pay_simple\",\n\"merchant\": \"2df67e134da679931d3cd7baa62496d0\",\n\"item_name\": \"10 GB - 4 EUR - 6 months\",\n\"item_number\": \"PGVG4FRY3EDKG\",\n\"currency\": \"eur\",\n\"amountf\": 4,\n\"ipn_url\": \"https://localhost/server/ipn\",\n\"success_url\": \"http://localhost/server/upgrade/?success=ok\",\n\"cancel_url\": \"\",\n\"custom\": null,\n\"want_shipping\": \"0\"\n}\n}\n]\n},\n\"message\": null,\n\"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1MTk4OTI3MTMsImV4cCI6MTU1MTQyODcxMywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSJ9._PWCLR7lgLmX3qA3gVnAhyGj-wt3WjDeNaml_tOunJM\"\n}",
           "type": "json"
         }
       ]
@@ -2656,7 +2733,14 @@ define({ "api": [
             "description": "<p>2-factor authentication enabled?</p>"
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"code\": 200,\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"login\": \"muonium\",\n        \"email\": \"muonium@muonium.ee\",\n        \"registration_date\": 1517233312,\n        \"double_auth\": true\n    },\n    \"message\": null,\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1MTk4OTI3MTMsImV4cCI6MTU1MTQyODcxMywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSJ9._PWCLR7lgLmX3qA3gVnAhyGj-wt3WjDeNaml_tOunJM\"\n}",
+          "type": "json"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "src/user.coffee",

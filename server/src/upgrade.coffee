@@ -15,6 +15,36 @@
 @apiSuccess (Success 200) 				{Int} 	 	data.start				Timestamp which corresponds to subscription date.
 @apiSuccess (Success 200) 				{Int} 	 	data.end				Timestamp which corresponds to upgrade expiration.
 @apiSuccess (Success 200) 				{Int} 	 	data.removed			0: no, 1: yes.
+
+@apiSuccessExample {json} Success-Response:
+{
+    "code": 200,
+    "status": "success",
+    "data": [
+        {
+            "txn_id": "XDGHGTFHHBTH",
+            "size": "10000000000",
+            "price": 4,
+            "currency": "EUR",
+            "start": 0,
+            "end": 1525104943,
+            "removed": 0,
+            "currency_symbol": "€"
+        },
+        {
+            "txn_id": "XDGHGTFHHBTT",
+            "size": "10000000000",
+            "price": 4,
+            "currency": "EUR",
+            "start": 0,
+            "end": 1525104943,
+            "removed": 0,
+            "currency_symbol": "€"
+        }
+    ],
+    "message": null,
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1MTk4OTI3MTMsImV4cCI6MTU1MTQyODcxMywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSJ9._PWCLR7lgLmX3qA3gVnAhyGj-wt3WjDeNaml_tOunJM"
+}
 ###
 
 ###
@@ -56,7 +86,7 @@
 					"item_number": "PGVG4FRY3EDKG",
 					"currency": "eur",
 					"amountf": 4,
-					"ipn_url": "https://mui.cloud/core/IPN",
+					"ipn_url": "https://localhost/server/ipn",
 					"success_url": "http://localhost/server/upgrade/?success=ok",
 					"cancel_url": "",
 					"custom": null,
@@ -66,6 +96,6 @@
 		]
 	},
 	"message": null,
-	"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzM4NCJ9.eyJpYXQiOjE1MTg3Njk4NjUsImp0aSI6InB0SFhYbm1QS1lcL0plaUNQUTRncjZyY1lcL0ROMU55R2hLOVNkK3REZTF0UT0iLCJpc3MiOiJsb2NhbGhvc3QiLCJuYmYiOjE1MTg3Njk4NjUsImV4cCI6MTUxODc3MTA2NSwiZGF0YSI6eyJ1aWQiOjd9fQ.obS-Ow3jFFPT0sfUupt8l6ndD-l6VY58Ex0wtRreCoT-FyQUBWedtDQI_vGDsxfg"
+	"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1MTk4OTI3MTMsImV4cCI6MTU1MTQyODcxMywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSJ9._PWCLR7lgLmX3qA3gVnAhyGj-wt3WjDeNaml_tOunJM"
 }
 ###
