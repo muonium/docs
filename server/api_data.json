@@ -1624,9 +1624,16 @@
           {
             "group": "Parameter",
             "type": "Int",
-            "optional": false,
+            "optional": true,
             "field": "uid",
-            "description": "<p>User id.</p>"
+            "description": "<p>User id, if not specified, you must send username.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "username",
+            "description": "<p>Login or email, if not specified, you must send uid.</p>"
           }
         ]
       }
@@ -1640,6 +1647,13 @@
             "optional": false,
             "field": "message",
             "description": "<p>&quot;sent&quot;. Mail sent successfully.</p>"
+          },
+          {
+            "group": "Success 200 - sent",
+            "type": "Int",
+            "optional": false,
+            "field": "data",
+            "description": "<p>UID.</p>"
           }
         ],
         "Success 200 - wait": [
@@ -1649,6 +1663,26 @@
             "optional": false,
             "field": "message",
             "description": "<p>&quot;wait&quot;. Mail was not sent because a mail has been already sent recently.</p>"
+          },
+          {
+            "group": "Success 200 - wait",
+            "type": "Int",
+            "optional": false,
+            "field": "data",
+            "description": "<p>UID.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 400 - unknownUser": [
+          {
+            "group": "Error 400 - unknownUser",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>&quot;unknownUser&quot;. This user does not exist.</p>"
           }
         ]
       }
@@ -2004,6 +2038,13 @@
             "optional": false,
             "field": "data.cek",
             "description": "<p>CEK.</p>"
+          },
+          {
+            "group": "Success 200 - Ok",
+            "type": "Int",
+            "optional": false,
+            "field": "data.uid",
+            "description": "<p>UID.</p>"
           }
         ],
         "Success 200 - doubleAuth": [
@@ -2016,17 +2057,10 @@
           },
           {
             "group": "Success 200 - doubleAuth",
-            "type": "Object",
+            "type": "Int",
             "optional": false,
             "field": "data",
-            "description": ""
-          },
-          {
-            "group": "Success 200 - doubleAuth",
-            "type": "String",
-            "optional": false,
-            "field": "data.cek",
-            "description": "<p>CEK.</p>"
+            "description": "<p>UID.</p>"
           }
         ],
         "Success 200 - wait": [
@@ -2039,17 +2073,10 @@
           },
           {
             "group": "Success 200 - wait",
-            "type": "Object",
+            "type": "Int",
             "optional": false,
             "field": "data",
-            "description": ""
-          },
-          {
-            "group": "Success 200 - wait",
-            "type": "String",
-            "optional": false,
-            "field": "data.cek",
-            "description": "<p>CEK.</p>"
+            "description": "<p>UID.</p>"
           }
         ]
       }
@@ -2063,6 +2090,13 @@
             "optional": false,
             "field": "message",
             "description": "<p>&quot;validate&quot;. Account is not validated but credentials are valid.</p>"
+          },
+          {
+            "group": "Error 401 - validate",
+            "type": "Int",
+            "optional": false,
+            "field": "data",
+            "description": "<p>UID.</p>"
           }
         ],
         "Error 401 - badPass": [
@@ -2136,6 +2170,13 @@
             "optional": false,
             "field": "data.cek",
             "description": "<p>CEK.</p>"
+          },
+          {
+            "group": "Success 200 - Ok",
+            "type": "Int",
+            "optional": false,
+            "field": "data.uid",
+            "description": "<p>UID.</p>"
           }
         ]
       }
@@ -2149,6 +2190,13 @@
             "optional": false,
             "field": "message",
             "description": "<p>&quot;validate&quot;. Account is not validated but credentials are valid.</p>"
+          },
+          {
+            "group": "Error 401 - validate",
+            "type": "Int",
+            "optional": false,
+            "field": "data",
+            "description": "<p>UID.</p>"
           }
         ],
         "Error 401 - badCode": [
@@ -3183,6 +3231,13 @@
             "optional": false,
             "field": "message",
             "description": "<p>&quot;created&quot;.</p>"
+          },
+          {
+            "group": "Created 201",
+            "type": "Int",
+            "optional": false,
+            "field": "uid",
+            "description": "<p>UID.</p>"
           }
         ]
       }

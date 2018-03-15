@@ -43,9 +43,14 @@
 @apiName 	PostLostpassMail
 @apiGroup 	Lostpass
 
-@apiParam 									{Int}    uid 		User id.
+@apiParam 									{Int}    [uid] 		    User id, if not specified, you must send username.
+@apiParam 									{String} [username]   Login or email, if not specified, you must send uid.
 
 @apiSuccess (Success 200 - sent) 			{String} message	"sent". Mail sent successfully.
+@apiSuccess (Success 200 - sent) 			{Int}    data     UID.
 
 @apiSuccess (Success 200 - wait)			{String} message	"wait". Mail was not sent because a mail has been already sent recently.
+@apiSuccess (Success 200 - wait) 			{Int}    data	    UID.
+
+@apiError 	(Error 400 - unknownUser)	{String} message	"unknownUser". This user does not exist.
 ###

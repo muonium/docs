@@ -51,6 +51,7 @@
 @apiParam 								{Boolean} [doubleAuth] 	If true, enable 2-factor authentication.
 
 @apiSuccess (Created 201) 				{String} message		"created".
+@apiSuccess (Created 201) 				{Int}    uid	       UID.
 
 @apiError 	(Error 400 - loginExists)	{String} message		"loginExists". Login already exists.
 @apiError 	(Error 400 - mailExists)	{String} message		"mailExists". Email already exists.
