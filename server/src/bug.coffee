@@ -1,17 +1,4 @@
 ###
-@api 		{get} 		/bug 			Get lists of different OS/Browsers
-@apiName 	GetBug
-@apiGroup 	Bug
-
-@apiHeader 								{String} token 			Token (Authorization: Bearer).
-
-@apiSuccess (Success 200) 				{String} token			Current token.
-@apiSuccess (Success 200) 				{Object} data
-@apiSuccess (Success 200) 				{Object} data.os		Object containing different operating systems.
-@apiSuccess (Success 200) 				{Object} data.browser	Object containing different browsers.
-###
-
-###
 @api 		{post} 		/bug			Send a bug report
 @apiName 	PostBug
 @apiGroup 	Bug
