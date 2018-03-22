@@ -2606,7 +2606,7 @@ define({ "api": [
             "group": "Success 200",
             "type": "Object",
             "optional": false,
-            "field": "data.fields",
+            "field": "data.plans.fields",
             "description": "<p>An object containing data which have to be sent within the form (as hidden input with key as name and value as value).</p>"
           }
         ]
@@ -2910,16 +2910,14 @@ define({ "api": [
     },
     "error": {
       "fields": {
-        "Error 400 - loginExist": [
+        "Error 400 - loginExists": [
           {
-            "group": "Error 400 - loginExist",
+            "group": "Error 400 - loginExists",
             "type": "String",
             "optional": false,
             "field": "token",
             "description": "<p>Current token.</p>"
-          }
-        ],
-        "Error 400 - loginExists": [
+          },
           {
             "group": "Error 400 - loginExists",
             "type": "String",

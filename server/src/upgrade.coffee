@@ -64,7 +64,7 @@
 @apiSuccess (Success 200) 				{String} 	data.plans.currency_symbol	Currency (symbol).
 @apiSuccess (Success 200) 				{Int} 		data.plans.duration			Duration in months.
 @apiSuccess (Success 200) 				{String} 	data.plans.product_id		Product ID.
-@apiSuccess (Success 200) 				{Object} 	data.fields					An object containing data which have to be sent within the form (as hidden input with key as name and value as value).
+@apiSuccess (Success 200) 				{Object} 	data.plans.fields					An object containing data which have to be sent within the form (as hidden input with key as name and value as value).
 
 @apiSuccessExample {json} Success-Response:
 {

@@ -71,7 +71,7 @@
 @apiSuccess (Success 200) 				{String} token			Current token.
 @apiSuccess (Success 200) 				{String} message		Username has been updated.
 
-@apiError 	(Error 400 - loginExist) 	{String} token			Current token.
+@apiError 	(Error 400 - loginExists) 	{String} token			Current token.
 @apiError 	(Error 400 - loginExists)	{String} message		"loginExists". Login already exists.
 
 @apiError 	(Error 400 - loginFormat) 	{String} token			Current token.
