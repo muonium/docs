@@ -13,13 +13,11 @@
 ###
 
 ###
-@api 		{delete} 	/share 			Unshare a file
+@api 		{delete} 	/share/id/:id 			Unshare a file
 @apiName 	DeleteShare
 @apiGroup 	Share
 
 @apiHeader 								{String} 	token 					Token (Authorization: Bearer).
-
-@apiParam 								{Int}		id						File ID.
 
 @apiSuccess (Success 200) 				{String} 	token					Current token.
 ###

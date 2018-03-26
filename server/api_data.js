@@ -2168,7 +2168,7 @@ define({ "api": [
   },
   {
     "type": "delete",
-    "url": "/share",
+    "url": "/share/id/:id",
     "title": "Unshare a file",
     "name": "DeleteShare",
     "group": "Share",
@@ -2181,19 +2181,6 @@ define({ "api": [
             "optional": false,
             "field": "token",
             "description": "<p>Token (Authorization: Bearer).</p>"
-          }
-        ]
-      }
-    },
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Int",
-            "optional": false,
-            "field": "id",
-            "description": "<p>File ID.</p>"
           }
         ]
       }
