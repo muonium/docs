@@ -1,6 +1,6 @@
 ###
-@api 		{post} 		/trash 			Move file(s)/folder(s) to trash
-@apiName 	PostTrash
+@api 		{post} 		/trash/to 			Move file(s)/folder(s) to trash
+@apiName 	PostTrashTo
 @apiGroup 	Trash
 
 @apiHeader 								{String} 	token 					Token (Authorization: Bearer).
@@ -13,8 +13,8 @@
 ###
 
 ###
-@api 		{delete} 	/trash 			Restore file(s)/folder(s) from trash
-@apiName 	DeleteTrash
+@api 		{post} 	/trash/from 			Restore file(s)/folder(s) from trash
+@apiName 	PostTrashFrom
 @apiGroup 	Trash
 
 @apiHeader 								{String} 	token 					Token (Authorization: Bearer).

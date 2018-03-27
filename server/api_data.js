@@ -2266,10 +2266,10 @@ define({ "api": [
     "groupTitle": "Share"
   },
   {
-    "type": "delete",
-    "url": "/trash",
+    "type": "post",
+    "url": "/trash/from",
     "title": "Restore file(s)/folder(s) from trash",
-    "name": "DeleteTrash",
+    "name": "PostTrashFrom",
     "group": "Trash",
     "header": {
       "fields": {
@@ -2330,9 +2330,9 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/trash",
+    "url": "/trash/to",
     "title": "Move file(s)/folder(s) to trash",
-    "name": "PostTrash",
+    "name": "PostTrashTo",
     "group": "Trash",
     "header": {
       "fields": {
