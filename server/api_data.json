@@ -1883,9 +1883,81 @@
     "groupTitle": "Session"
   },
   {
+    "type": "delete",
+    "url": "/session/all",
+    "title": "Delete all sessions",
+    "name": "DeleteSessionAll",
+    "group": "Session",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>Token (Authorization: Bearer).</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>&quot;removeToken&quot;. Token has to be removed from client.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "src/session.coffee",
+    "groupTitle": "Session"
+  },
+  {
+    "type": "delete",
+    "url": "/session/jti/:jti",
+    "title": "Delete the session with jti",
+    "name": "DeleteSessionJti",
+    "group": "Session",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>Token (Authorization: Bearer).</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": true,
+            "field": "message",
+            "description": "<p>&quot;removeToken&quot;. Token has to be removed from client.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "src/session.coffee",
+    "groupTitle": "Session"
+  },
+  {
     "type": "get",
     "url": "/session",
-    "title": "Get UID from token",
+    "title": "Get UID and list of sessions from token",
     "name": "GetSession",
     "group": "Session",
     "header": {
@@ -1924,6 +1996,27 @@
             "optional": false,
             "field": "data.uid",
             "description": "<p>User id.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "data.tokens",
+            "description": "<p>List of sessions.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.tokens.jti",
+            "description": "<p>Token.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Int",
+            "optional": false,
+            "field": "data.tokens.iat",
+            "description": "<p>Issued at.</p>"
           }
         ]
       }

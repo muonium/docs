@@ -24,7 +24,7 @@
 ###
 
 ###
-@api 		{get} 		/session 			Get UID from token
+@api 		{get} 		/session 			Get UID and list of sessions from token
 @apiName 	GetSession
 @apiGroup 	Session
 
@@ -33,11 +33,34 @@
 @apiSuccess (Success 200) 				{String} token		Current token.
 @apiSuccess (Success 200) 				{Object} data
 @apiSuccess (Success 200) 				{Int} data.uid		User id.
+@apiSuccess (Success 200) 				{Object[]} data.tokens		List of sessions.
+@apiSuccess (Success 200) 				{String} data.tokens.jti		Token.
+@apiSuccess (Success 200) 				{Int} data.tokens.iat		Issued at.
 ###
 
 ###
 @api 		{delete} 		/session 		Delete the session
 @apiName 	DeleteSession
+@apiGroup 	Session
+
+@apiHeader 								{String} token 		Token (Authorization: Bearer).
+
+@apiSuccess (Success 200) 				{String} message	"removeToken". Token has to be removed from client.
+###
+
+###
+@api 		{delete} 		/session/jti/:jti 		Delete the session with jti
+@apiName 	DeleteSessionJti
+@apiGroup 	Session
+
+@apiHeader 								{String} token 		Token (Authorization: Bearer).
+
+@apiSuccess (Success 200) 				{String} [message]	"removeToken". Token has to be removed from client.
+###
+
+###
+@api 		{delete} 		/session/all 		Delete all sessions
+@apiName 	DeleteSessionAll
 @apiGroup 	Session
 
 @apiHeader 								{String} token 		Token (Authorization: Bearer).
