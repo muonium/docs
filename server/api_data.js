@@ -2017,6 +2017,13 @@ define({ "api": [
             "optional": false,
             "field": "data.tokens.iat",
             "description": "<p>Issued at.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "data.tokens.current",
+            "description": "<p>Current session?</p>"
           }
         ]
       }

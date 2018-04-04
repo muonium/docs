@@ -36,6 +36,7 @@
 @apiSuccess (Success 200) 				{Object[]} data.tokens		List of sessions.
 @apiSuccess (Success 200) 				{String} data.tokens.jti		Token.
 @apiSuccess (Success 200) 				{Int} data.tokens.iat		Issued at.
+@apiSuccess (Success 200) 				{Boolean} data.tokens.current		Current session?
 ###
 
 ###
