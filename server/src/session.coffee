@@ -50,7 +50,7 @@
 ###
 
 ###
-@api 		{delete} 		/session/jti/:jti 		Delete the session with jti
+@api 		{delete} 		/session/jti/:jti 		Delete the session with urlencoded jti
 @apiName 	DeleteSessionJti
 @apiGroup 	Session
 

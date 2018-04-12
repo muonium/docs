@@ -1921,7 +1921,7 @@
   {
     "type": "delete",
     "url": "/session/jti/:jti",
-    "title": "Delete the session with jti",
+    "title": "Delete the session with urlencoded jti",
     "name": "DeleteSessionJti",
     "group": "Session",
     "header": {
