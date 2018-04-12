@@ -50,7 +50,8 @@
 ###
 
 ###
-@api 		{delete} 		/session/jti/:jti 		Delete the session with urlencoded jti
+@api 		{delete} 		/session/jti/:jti 		Delete the session with jti
+@apiDescription Jti is a base64 string, in order to pass it in the url, base64url standard must be respected (- instead + and _ instead /)
 @apiName 	DeleteSessionJti
 @apiGroup 	Session
 

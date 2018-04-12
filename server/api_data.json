@@ -1921,7 +1921,8 @@
   {
     "type": "delete",
     "url": "/session/jti/:jti",
-    "title": "Delete the session with urlencoded jti",
+    "title": "Delete the session with jti",
+    "description": "<p>Jti is a base64 string, in order to pass it in the url, base64url standard must be respected (- instead + and _ instead /)</p>",
     "name": "DeleteSessionJti",
     "group": "Session",
     "header": {
