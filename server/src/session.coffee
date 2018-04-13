@@ -12,10 +12,14 @@
 @apiSuccess (Success 200 - Ok) 			{Int}    data.uid	UID.
 
 @apiSuccess (Success 200 - doubleAuth)	{String} message	"doubleAuth". 2-factor authentication is enabled, credentials are valid but you need to send them again with code sent by mail.
-@apiSuccess (Success 200 - doubleAuth) 	{Int}    data     UID.
+@apiSuccess (Success 200 - doubleAuth) 	{Object} data
+@apiSuccess (Success 200 - doubleAuth) 	{String} data.cek	CEK.
+@apiSuccess (Success 200 - doubleAuth) 	{Int}    data.uid	UID.
 
 @apiSuccess (Success 200 - wait)		{String} message	"wait". 2-factor authentication is enabled, credentials are valid but you need to send them again with code sent by mail. Mail was not sent because a mail has been already sent recently.
-@apiSuccess (Success 200 - wait) 		{Int}    data     UID.
+@apiSuccess (Success 200 - wait) 		{Object} data
+@apiSuccess (Success 200 - wait) 		{String} data.cek	CEK.
+@apiSuccess (Success 200 - wait) 		{Int}    data.uid	UID.
 
 @apiError 	(Error 401 - validate)		{String} message	"validate". Account is not validated but credentials are valid.
 @apiError   (Error 401 - validate) 		{Int}    data     UID.

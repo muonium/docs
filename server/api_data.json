@@ -2101,9 +2101,23 @@
           },
           {
             "group": "Success 200 - doubleAuth",
-            "type": "Int",
+            "type": "Object",
             "optional": false,
             "field": "data",
+            "description": ""
+          },
+          {
+            "group": "Success 200 - doubleAuth",
+            "type": "String",
+            "optional": false,
+            "field": "data.cek",
+            "description": "<p>CEK.</p>"
+          },
+          {
+            "group": "Success 200 - doubleAuth",
+            "type": "Int",
+            "optional": false,
+            "field": "data.uid",
             "description": "<p>UID.</p>"
           }
         ],
@@ -2117,9 +2131,23 @@
           },
           {
             "group": "Success 200 - wait",
-            "type": "Int",
+            "type": "Object",
             "optional": false,
             "field": "data",
+            "description": ""
+          },
+          {
+            "group": "Success 200 - wait",
+            "type": "String",
+            "optional": false,
+            "field": "data.cek",
+            "description": "<p>CEK.</p>"
+          },
+          {
+            "group": "Success 200 - wait",
+            "type": "Int",
+            "optional": false,
+            "field": "data.uid",
             "description": "<p>UID.</p>"
           }
         ]
