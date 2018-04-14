@@ -123,7 +123,7 @@
 @apiParam 								{String} cek 			CEK.
 
 @apiSuccess (Success 200) 				{String} token			Current token.
-@apiSuccess (Success 200) 				{String} message		CEK has been updated.
+@apiSuccess (Success 200) 				{String} message		"removeToken". Token has to be removed from client.
 ###
 
 ###

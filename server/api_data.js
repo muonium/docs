@@ -2963,7 +2963,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "message",
-            "description": "<p>CEK has been updated.</p>"
+            "description": "<p>&quot;removeToken&quot;. Token has to be removed from client.</p>"
           }
         ]
       }
