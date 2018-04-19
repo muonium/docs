@@ -2171,6 +2171,15 @@ define({ "api": [
             "description": "<p>UID.</p>"
           }
         ],
+        "Error 401 - badUser": [
+          {
+            "group": "Error 401 - badUser",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>&quot;badUser&quot;. User does not exist.</p>"
+          }
+        ],
         "Error 401 - badPass": [
           {
             "group": "Error 401 - badPass",
