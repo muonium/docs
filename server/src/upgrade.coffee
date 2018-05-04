@@ -87,7 +87,7 @@
 					"currency": "eur",
 					"amountf": 4,
 					"ipn_url": "https://localhost/server/ipn",
-					"success_url": "http://localhost/server/upgrade/?success=ok",
+					"success_url": "http://localhost/#/upgrade/?success=ok",
 					"cancel_url": "",
 					"custom": null,
 					"want_shipping": "0"
@@ -98,4 +98,55 @@
 	"message": null,
 	"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1MTk4OTI3MTMsImV4cCI6MTU1MTQyODcxMywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSJ9._PWCLR7lgLmX3qA3gVnAhyGj-wt3WjDeNaml_tOunJM"
 }
+###
+
+###
+@api 		{get} 		/upgrade/canSubscribe 			Can the user subscribe to a new offer?
+@apiName 	GetCanSubscribe
+@apiGroup 	Upgrade
+
+@apiHeader 								{String} token 			Token (Authorization: Bearer).
+
+@apiSuccess (Success 200) 				{String} 	token					Current token.
+@apiSuccess (Success 200) 				{Object} 	data
+@apiSuccess (Success 200) 				{Boolean}	data.can_subscribe		true or false.
+###
+
+###
+@api 		{get} 		/upgrade/hasSubscriptionActive 	Does the user have an active offer?
+@apiName 	GetHasSubscriptionActive
+@apiGroup 	Upgrade
+
+@apiHeader 								{String} token 			Token (Authorization: Bearer).
+
+@apiSuccess (Success 200) 				{String} 	token				Current token.
+@apiSuccess (Success 200) 				{Object} 	data
+@apiSuccess (Success 200) 				{Boolean}	data.subscribed		true or false.
+@apiSuccess (Success 200) 				{Int}	    [data.id_upgrade]	Upgrade ID.
+###
+
+###
+@api 		{get} 		/upgrade/cancel 	Cancel the current offer
+@apiName 	GetCancel
+@apiGroup 	Upgrade
+
+@apiHeader 								{String} token 			Token (Authorization: Bearer).
+
+@apiSuccess (Success 200) 				{String} 	token				Current token.
+@apiSuccess (Success 200) 				{Object} 	data
+@apiSuccess (Success 200) 				{Boolean}	data.canceled		true or false.
+###
+
+###
+@api 		{get} 		/upgrade/hasSubscriptionEnded 	Does the current offer has ended?
+@apiName 	GetHasSubscriptionEnded
+@apiGroup 	Upgrade
+
+@apiHeader 								{String} token 			Token (Authorization: Bearer).
+
+@apiSuccess (Success 200) 				{String} 	token				Current token.
+@apiSuccess (Success 200) 				{Object} 	data
+@apiSuccess (Success 200) 				{Boolean}	data.expired		true or false.
+@apiSuccess (Success 200) 				{Int}	    [data.days_left]	Days left.
+@apiSuccess (Success 200) 				{Boolean}	[data.expires_soon]	Expiration in less than 1 week?
 ###

@@ -2531,6 +2531,227 @@
   },
   {
     "type": "get",
+    "url": "/upgrade/canSubscribe",
+    "title": "Can the user subscribe to a new offer?",
+    "name": "GetCanSubscribe",
+    "group": "Upgrade",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>Token (Authorization: Bearer).</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>Current token.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "data",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "data.can_subscribe",
+            "description": "<p>true or false.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "src/upgrade.coffee",
+    "groupTitle": "Upgrade"
+  },
+  {
+    "type": "get",
+    "url": "/upgrade/cancel",
+    "title": "Cancel the current offer",
+    "name": "GetCancel",
+    "group": "Upgrade",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>Token (Authorization: Bearer).</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>Current token.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "data",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "data.canceled",
+            "description": "<p>true or false.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "src/upgrade.coffee",
+    "groupTitle": "Upgrade"
+  },
+  {
+    "type": "get",
+    "url": "/upgrade/hasSubscriptionActive",
+    "title": "Does the user have an active offer?",
+    "name": "GetHasSubscriptionActive",
+    "group": "Upgrade",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>Token (Authorization: Bearer).</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>Current token.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "data",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "data.subscribed",
+            "description": "<p>true or false.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Int",
+            "optional": true,
+            "field": "data.id_upgrade",
+            "description": "<p>Upgrade ID.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "src/upgrade.coffee",
+    "groupTitle": "Upgrade"
+  },
+  {
+    "type": "get",
+    "url": "/upgrade/hasSubscriptionEnded",
+    "title": "Does the current offer has ended?",
+    "name": "GetHasSubscriptionEnded",
+    "group": "Upgrade",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>Token (Authorization: Bearer).</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>Current token.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "data",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "data.expired",
+            "description": "<p>true or false.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Int",
+            "optional": true,
+            "field": "data.days_left",
+            "description": "<p>Days left.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": true,
+            "field": "data.expires_soon",
+            "description": "<p>Expiration in less than 1 week?</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "src/upgrade.coffee",
+    "groupTitle": "Upgrade"
+  },
+  {
+    "type": "get",
     "url": "/upgrade/history",
     "title": "Get upgrade history",
     "name": "GetHistory",
@@ -2739,7 +2960,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n\"code\": 200,\n\"status\": \"success\",\n\"data\": {\n\"endpoint\": \"https://www.coinpayments.net/index.php\",\n\"plans\": [\n{\n\"size\": \"10000000000\",\n\"price\": 4,\n\"currency\": \"eur\",\n\"duration\": 6,\n\"product_id\": \"PGVG4FRY3EDKG\",\n\"fields\": {\n\"cmd\": \"_pay_simple\",\n\"merchant\": \"2df67e134da679931d3cd7baa62496d0\",\n\"item_name\": \"10 GB - 4 EUR - 6 months\",\n\"item_number\": \"PGVG4FRY3EDKG\",\n\"currency\": \"eur\",\n\"amountf\": 4,\n\"ipn_url\": \"https://localhost/server/ipn\",\n\"success_url\": \"http://localhost/server/upgrade/?success=ok\",\n\"cancel_url\": \"\",\n\"custom\": null,\n\"want_shipping\": \"0\"\n}\n}\n]\n},\n\"message\": null,\n\"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1MTk4OTI3MTMsImV4cCI6MTU1MTQyODcxMywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSJ9._PWCLR7lgLmX3qA3gVnAhyGj-wt3WjDeNaml_tOunJM\"\n}",
+          "content": "{\n\"code\": 200,\n\"status\": \"success\",\n\"data\": {\n\"endpoint\": \"https://www.coinpayments.net/index.php\",\n\"plans\": [\n{\n\"size\": \"10000000000\",\n\"price\": 4,\n\"currency\": \"eur\",\n\"duration\": 6,\n\"product_id\": \"PGVG4FRY3EDKG\",\n\"fields\": {\n\"cmd\": \"_pay_simple\",\n\"merchant\": \"2df67e134da679931d3cd7baa62496d0\",\n\"item_name\": \"10 GB - 4 EUR - 6 months\",\n\"item_number\": \"PGVG4FRY3EDKG\",\n\"currency\": \"eur\",\n\"amountf\": 4,\n\"ipn_url\": \"https://localhost/server/ipn\",\n\"success_url\": \"http://localhost/#/upgrade/?success=ok\",\n\"cancel_url\": \"\",\n\"custom\": null,\n\"want_shipping\": \"0\"\n}\n}\n]\n},\n\"message\": null,\n\"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1MTk4OTI3MTMsImV4cCI6MTU1MTQyODcxMywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSJ9._PWCLR7lgLmX3qA3gVnAhyGj-wt3WjDeNaml_tOunJM\"\n}",
           "type": "json"
         }
       ]
