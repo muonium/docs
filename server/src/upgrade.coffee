@@ -64,7 +64,7 @@
 @apiSuccess (Success 200) 				{String} 	data.plans.currency_symbol	Currency (symbol).
 @apiSuccess (Success 200) 				{Int} 		data.plans.duration			Duration in months.
 @apiSuccess (Success 200) 				{String} 	data.plans.product_id		Product ID.
-@apiSuccess (Success 200) 				{Object} 	data.plans.fields					An object containing data which have to be sent within the form (as hidden input with key as name and value as value).
+@apiSuccess (Success 200) 				{Object} 	data.plans.fields			An object containing data which have to be sent within the form (as hidden input with key as name and value as value). You will have to add manually an hidden input for success (success_url) and cancel URL (cancel_url) (as it may change according to client used)
 
 @apiSuccessExample {json} Success-Response:
 {
@@ -87,8 +87,6 @@
 					"currency": "eur",
 					"amountf": 4,
 					"ipn_url": "https://localhost/server/ipn",
-					"success_url": "http://localhost/#/upgrade/?success=ok",
-					"cancel_url": "",
 					"custom": null,
 					"want_shipping": "0"
 				}

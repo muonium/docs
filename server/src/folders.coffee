@@ -72,7 +72,7 @@
 @apiSuccess (Success 200) 				{Boolean} 	data.files.is_completed	File completed?
 @apiSuccess (Success 200) 				{Int} 		data.files.size			File size.
 @apiSuccess (Success 200) 				{Int} 		data.files.lastmod		Last modification (timestamp).
-@apiSuccess (Success 200) 				{String} 	data.files.url			Sharing link.
+@apiSuccess (Success 200) 				{String} 	data.files.url			Encoded ID for a file in order to share download link (for a webclient, you will have to put absolute URL to download route before it)
 @apiSuccess (Success 200) 				{Object} 	data.folders
 @apiSuccess (Success 200) 				{Int} 		data.folders.id			Folder ID.
 @apiSuccess (Success 200) 				{String} 	data.folders.name		Folder name.
@@ -118,7 +118,7 @@
                 "is_completed": true,
                 "size": 7811581,
                 "lastmod": 1519824137,
-                "url": "http://localhost/server/dl/?OQ"
+                "url": "OQ"
             },
             {
                 "id": 14,
@@ -129,7 +129,7 @@
                 "is_completed": true,
                 "size": 9209782,
                 "lastmod": 1517567397,
-                "url": "http://localhost/server/dl/?MTQ"
+                "url": "MTQ"
             },
             {
                 "id": 15,
@@ -140,7 +140,7 @@
                 "is_completed": true,
                 "size": 7182501,
                 "lastmod": 1517246641,
-                "url": "http://localhost/server/dl/?MTU"
+                "url": "MTU"
             }
         ]
     },
