@@ -3760,5 +3760,28 @@
     "version": "0.0.0",
     "filename": "src/validate.coffee",
     "groupTitle": "Validate"
+  },
+  {
+    "type": "get",
+    "url": "/version",
+    "title": "Get server version",
+    "name": "GetVersion",
+    "group": "Version",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data",
+            "description": "<p>Current version.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "src/version.coffee",
+    "groupTitle": "Version"
   }
 ]
