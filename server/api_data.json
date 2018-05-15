@@ -3204,6 +3204,49 @@
   },
   {
     "type": "post",
+    "url": "/user/changeLang",
+    "title": "Update lang in database according to language header",
+    "name": "PostChangeLang",
+    "group": "User",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>Token (Authorization: Bearer).</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>Current token.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Updated.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "src/user.coffee",
+    "groupTitle": "User"
+  },
+  {
+    "type": "post",
     "url": "/user/changeLogin",
     "title": "Change username",
     "name": "PostChangeLogin",

@@ -138,3 +138,14 @@
 @apiSuccess (Success 200) 				{String} token			Current token.
 @apiSuccess (Success 200) 				{String} message		Updated.
 ###
+
+###
+@api 		{post} 		/user/changeLang 	Update lang in database according to language header
+@apiName 	PostChangeLang
+@apiGroup 	User
+
+@apiHeader 								{String} token 			Token (Authorization: Bearer).
+
+@apiSuccess (Success 200) 				{String} token			Current token.
+@apiSuccess (Success 200) 				{String} message		Updated.
+###
