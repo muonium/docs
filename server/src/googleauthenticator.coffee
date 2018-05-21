@@ -7,16 +7,16 @@
 
 @apiSuccess (Success 200) 			{Object} data
 @apiSuccess (Success 200) 			{String} data.QRcode	QR code image in base 64.
+@apiSuccess (Success 200) 			{String} data.secretKey	Secret key to register key in Google Authenticator.
 @apiSuccessExample {json} Success-Response:
 {
-    {
-        "code":200,
-        "status":"success",
-        "data":{
-            "QRcode":"iVBORw015168fi9HXEIiFYJASLhGCReNfkfWPN+8pMf8r4rjZWwhwrY9\/CiEVCsEgIFgnBInFn8t6tCG9cEF9Zah+\/d6U+p6uXn3JgTd+IRUKwSAgWCcEicWnyfmzNd2Ppy0t++mFj6f3KVtgDjFgkBIuEYJEQLBLfT95\/QJX3SlHNh5d80\/CSe77IiEVCsEgIFgnBInGpz\/tTq7pdKfrYUy3UVzrGbOxJueUpwYhFQrBICBYJwSLx9e3kq2tD2E2EjzWQeeokqSmPP2EYsUgIFgnBIiFYJC5N3sdWpvaPLxDfuO6xF29875QtNf5GLBKCRUKwSAgWiTsnrK6s6nZz2ykb64LeeQzTym1M\/fRPjFgkBIuEYJEQLBIb+rxvXHpeKX3ZuBB\/rMh97FiJUXEbRiwSgkVCsEgIFok7ZTPvLPaY8lfc1Vi3EWH8XjXvPEmwSAgWCcEisWHD6kvK2Fc++dhEePxR3V9jhZp3XkSwSAgWCcEicanP+0u2WU7VukzpFuKPTaK7BkFq3nkRwSIhWCQEi8SdmvdjK8JdQ8eVCx3rPn\/sxQUjFgnBIiFYJASLxJ1Dmo51m5n66cZNmF0JStdeZuWPU3S5MWKRECwSgkVCsEh8X\/P++aJ9VSUbJ\/7HCuSPzfSPdaw8UAdlxCIhWCQEi4RgkdhwSNOUrpx8Y5HJsYOWxp7av7plId6IRUKwSAgWCcEikR\/S9Fd0Yz\/WKrKrhJnav1rsUP1gxCIhWCQEi4RgkdhwSNOUY9UdU3PbjY51rBw7tgNA2QxHCRYJwSIhWCQutYqc8s4F8WJP5rruuhufe+4xYpEQLBKCRUKwSFxaeZ9ait14mOexderzB5DecKzN\/ZZPNmKRECwSgkVCsEhcahU5vWg+jB9Wpq67cdvw1BPVRUYsEoJFQrBICBaJO60iu6aMx7o\/bpyPTznWbeYYG1Y5SrBICBYJwSJxafLeTbH\/5+ayw6Ge2qH61IPO+f9BIxYJwSIhWCQEi8SdspmuDeHUe1cu1K3Ld08YK83ZN67LaxXJkwSLhGCRECwS36+8P2XjrLn7AmDsWPfHleseKAQyYpEQLBKCRUKwSOzvNjOla\/fYbSvtLrSxFc\/GbzjuFdcbsUgIFgnBIiFYJC6VzRzrqD5+8VMt1DfW2HTd2FcuVPydjVgkBIuEYJEQLBKvbhU5vu7KWVEbLzR2bLbenWSrzzsvIlgkBIuEYJG4M3k\/5ql6\/GMbZVdsrPEvqqSMWCQEi4RgkRAsEu+avD81Ed64F7Q7SunY6axjat55kmCRECwSgkUibxW50cba8\/Enr9zGh3f+rabee48Ri4RgkRAsEoJF4tLk\/VjzmZ93KtOHbuK\/sRfNlhobIxYJwSIhWCQEi8S7+rzzYxixSAgWCcEiIVgkBIuEYJEQLBL\/AVecpqm7Q7GBAAAAAElFTkSuQmCC"
-        },
-        "message":null,
-        "token":null
-    }
+    "code": 200,
+    "status": "success",
+    "data": {
+        "QRcode": "iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAIAAAAiOjnJAAAABmJLR0QA/wD/AP+gvaeTAAAE/ElEQVR4nO3dzXLcNhCF0SiV939lZ5Eda8Twpz+QUp2ztGdIyL6FakJN4OvPnz9/wbS/nx4Av5NgkRAsEoJFQrBICBaJfz7+6dfX15rb7y92bIax+fCdvz11o/0P79sf1eB379zoju/+rcxYJASLhGCRECwSn4v3jcHfJ94pKrvvnvoBT5XJg88fd6z/HzRjkRAsEoJFQrBIHCreN+4sH9+58n5t2y1Mn1qXP3WpO5YN49qNzFgkBIuEYJEQLBJXivenDJbndxpj7gzjzvPHz2LGIiFYJASLhGCR+EnF+2Ar+lOl/WBz/eDvAwpmLBKCRUKwSAgWiSvF+9vqxP8MvpJ66kbL3qodtOBGZiwSgkVCsEgIFolDxftT7RzLCuF3ltgbg237C5ixSAgWCcEiIVgkvl61jN7tvjLYEb8xeKlTXvJI8R0zFgnBIiFYJASLxOfi/SVbGA4upu/ftyvAn2qqeXxbGzMWCcEiIVgkBIvEfNvMUzXmvsFNYAYL/1N/221Vv+/aM4QZi4RgkRAsEoJF4nPx3u2C8s7u8u511jsGN6MffEg6+G9lxiIhWCQEi4RgkfhcvJ8qZpdt8zI4qjsf3resBb7b137z4WvPAWYsEoJFQrBICBaJQy+sds0ty2r57g3VwWeXwfakwd9/XBuGGYuEYJEQLBKCRWKgeB+sIu9cefC7d7ykEeiUopfJjEVCsEgIFgnBInGobeaUwWr9TjvHnR6bbsv4/Q8PjqpbW9fzzpMEi4RgkRAsEod2mxk8Hqir5QeH8ZJOmGXHMBXvB5ixSAgWCcEiIVgkrrTNDDZQP3V20qlh/Ii+oKeaiKy8s5RgkRAsEoJFIi/ez41mVc/Jvu7545R3PgZZeedJgkVCsEgIFokrJ6z+zxUfOtFp2WGtP+I12sc3vzRjkRAsEoJFQrBIHOp539etvA/qNjrvNsEffGgYvJGVd54kWCQEi4RgkTi08r7xkkaRO1feWLYuf+pSyxQtN2YsEoJFQrBICBaJgZX3ja4jvlvFHnxoWLbry8uPnTJjkRAsEoJFQrBIfC7el+0NeepGT70Z263an9LtZ1l04puxSAgWCcEiIVgkDh3S9M6dFPc9Nchlu112B2mNMGORECwSgkVCsEgcapt56mzPO8NYdhrUqZ932ZlNp668MfI/aMYiIVgkBIuEYJEYeGH1znef2lfy1JWfOu9p/8r7ul9pHGTGIiFYJASLhGCROLTy3lXrd3re9290asxPLYjfeZnglPWNQGYsEoJFQrBICBaJ1Yc0De5FM7iovdEt8Q/e6CWv0X7HjEVCsEgIFgnBInGleP/1pX13PGnXxj7IVpG8l2CRECwSgkXic/H+lMFSt+s9H7RsO5313zVjkRAsEoJFQrBIHNoqsnPqsKTBA566Pv1lq/bdd/cvdZAZi4RgkRAsEoJFYuCF1VMG9y5f1mz+s7Z5WXyj75ixSAgWCcEiIVgkDhXvG93Ln6d0PSePH0964VLdjezzzosIFgnBIiFYJK4U78s81UXT1ePv3H2+eKvWjEVCsEgIFgnBIvHq4n3fndXzwQ3lH9+U8ch91w/SjEVCsEgIFgnBInGleF/WCdMd1jo4jI1lR1Ytq9a1zfAigkVCsEgIFolD+7x3un1dXtKYPzjmZV00TljlvQSLhGCRECwS79rnnV/DjEVCsEgIFgnBIiFYJASLhGCR+BeW576+sRiekwAAAABJRU5ErkJggg==",
+        "secretKey": "ACBC66AAF554ABDAAAAA3AADCA5A6A5B"
+    },
+    "message": null,
+    "token": null
 }
 ###

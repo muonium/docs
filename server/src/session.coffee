@@ -88,7 +88,7 @@
 
 @apiParam 								{Int}    uid 		User id.
 @apiParam 								{String} password 	Password already hashed with mui_hash.js.
-@apiParam 								{String} code 		Code sent by mail.
+@apiParam 								{String} code 		Code sent by mail or Google Authenticator.
 
 @apiSuccess (Success 200 - Ok) 			{String} token		Generated token
 @apiSuccess (Success 200 - Ok) 			{Object} data
