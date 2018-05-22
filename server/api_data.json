@@ -1351,6 +1351,63 @@
     "groupTitle": "Folders"
   },
   {
+    "type": "post",
+    "url": "/generateQRcode",
+    "title": "Get QR code",
+    "name": "GetQRCodeGoogleAuthenticator",
+    "group": "GoogleAuthenticator",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "username",
+            "description": "<p>Username.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "data",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.QRcode",
+            "description": "<p>QR code image in base 64.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.secretKey",
+            "description": "<p>Secret key to register key in Google Authenticator.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"code\": 200,\n    \"status\": \"success\",\n    \"data\": {\n        \"QRcode\": \"iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAIAAAAiOjnJAAAABmJLR0QA/wD/AP+gvaeTAAAE/ElEQVR4nO3dzXLcNhCF0SiV939lZ5Eda8Twpz+QUp2ztGdIyL6FakJN4OvPnz9/wbS/nx4Av5NgkRAsEoJFQrBICBaJfz7+6dfX15rb7y92bIax+fCdvz11o/0P79sf1eB379zoju/+rcxYJASLhGCRECwSn4v3jcHfJ94pKrvvnvoBT5XJg88fd6z/HzRjkRAsEoJFQrBIHCreN+4sH9+58n5t2y1Mn1qXP3WpO5YN49qNzFgkBIuEYJEQLBJXivenDJbndxpj7gzjzvPHz2LGIiFYJASLhGCR+EnF+2Ar+lOl/WBz/eDvAwpmLBKCRUKwSAgWiSvF+9vqxP8MvpJ66kbL3qodtOBGZiwSgkVCsEgIFolDxftT7RzLCuF3ltgbg237C5ixSAgWCcEiIVgkvl61jN7tvjLYEb8xeKlTXvJI8R0zFgnBIiFYJASLxOfi/SVbGA4upu/ftyvAn2qqeXxbGzMWCcEiIVgkBIvEfNvMUzXmvsFNYAYL/1N/221Vv+/aM4QZi4RgkRAsEoJF4nPx3u2C8s7u8u511jsGN6MffEg6+G9lxiIhWCQEi4RgkfhcvJ8qZpdt8zI4qjsf3resBb7b137z4WvPAWYsEoJFQrBICBaJQy+sds0ty2r57g3VwWeXwfakwd9/XBuGGYuEYJEQLBKCRWKgeB+sIu9cefC7d7ykEeiUopfJjEVCsEgIFgnBInGobeaUwWr9TjvHnR6bbsv4/Q8PjqpbW9fzzpMEi4RgkRAsEod2mxk8Hqir5QeH8ZJOmGXHMBXvB5ixSAgWCcEiIVgkrrTNDDZQP3V20qlh/Ii+oKeaiKy8s5RgkRAsEoJFIi/ez41mVc/Jvu7545R3PgZZeedJgkVCsEgIFokrJ6z+zxUfOtFp2WGtP+I12sc3vzRjkRAsEoJFQrBIHOp539etvA/qNjrvNsEffGgYvJGVd54kWCQEi4RgkTi08r7xkkaRO1feWLYuf+pSyxQtN2YsEoJFQrBICBaJgZX3ja4jvlvFHnxoWLbry8uPnTJjkRAsEoJFQrBIfC7el+0NeepGT70Z263an9LtZ1l04puxSAgWCcEiIVgkDh3S9M6dFPc9Nchlu112B2mNMGORECwSgkVCsEgcapt56mzPO8NYdhrUqZ932ZlNp668MfI/aMYiIVgkBIuEYJEYeGH1znef2lfy1JWfOu9p/8r7ul9pHGTGIiFYJASLhGCROLTy3lXrd3re9290asxPLYjfeZnglPWNQGYsEoJFQrBICBaJ1Yc0De5FM7iovdEt8Q/e6CWv0X7HjEVCsEgIFgnBInGleP/1pX13PGnXxj7IVpG8l2CRECwSgkXic/H+lMFSt+s9H7RsO5313zVjkRAsEoJFQrBIHNoqsnPqsKTBA566Pv1lq/bdd/cvdZAZi4RgkRAsEoJFYuCF1VMG9y5f1mz+s7Z5WXyj75ixSAgWCcEiIVgkDhXvG93Ln6d0PSePH0964VLdjezzzosIFgnBIiFYJK4U78s81UXT1ePv3H2+eKvWjEVCsEgIFgnBIvHq4n3fndXzwQ3lH9+U8ch91w/SjEVCsEgIFgnBInGleF/WCdMd1jo4jI1lR1Ytq9a1zfAigkVCsEgIFolD+7x3un1dXtKYPzjmZV00TljlvQSLhGCRECwS79rnnV/DjEVCsEgIFgnBIiFYJASLhGCR+BeW576+sRiekwAAAABJRU5ErkJggg==\",\n        \"secretKey\": \"ACBC66AAF554ABDAAAAA3AADCA5A6A5B\"\n    },\n    \"message\": null,\n    \"token\": null\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/googleauthenticator.coffee",
+    "groupTitle": "GoogleAuthenticator"
+  },
+  {
     "type": "get",
     "url": "/home/languages",
     "title": "Get available languages",
@@ -2119,6 +2176,13 @@
             "optional": false,
             "field": "data.uid",
             "description": "<p>UID.</p>"
+          },
+          {
+            "group": "Success 200 - doubleAuth",
+            "type": "Int",
+            "optional": false,
+            "field": "data.doubleAuthMethod",
+            "description": "<p>1: by mail, 2: Google Auth.</p>"
           }
         ],
         "Success 200 - wait": [
@@ -2223,7 +2287,7 @@
             "type": "String",
             "optional": false,
             "field": "code",
-            "description": "<p>Code sent by mail.</p>"
+            "description": "<p>Code sent by mail or Google Authenticator.</p>"
           }
         ]
       }
@@ -3071,17 +3135,17 @@
           },
           {
             "group": "Success 200",
-            "type": "Boolean",
+            "type": "Int",
             "optional": false,
             "field": "data.double_auth",
-            "description": "<p>2-factor authentication enabled?</p>"
+            "description": "<p>2-factor authentication method</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"code\": 200,\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"login\": \"muonium\",\n        \"email\": \"muonium@muonium.ee\",\n        \"registration_date\": 1517233312,\n        \"double_auth\": true\n    },\n    \"message\": null,\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1MTk4OTI3MTMsImV4cCI6MTU1MTQyODcxMywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSJ9._PWCLR7lgLmX3qA3gVnAhyGj-wt3WjDeNaml_tOunJM\"\n}",
+          "content": "{\n    \"code\": 200,\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"login\": \"muonium\",\n        \"email\": \"muonium@muonium.ee\",\n        \"registration_date\": 1517233312,\n        \"double_auth\": 0\n    },\n    \"message\": null,\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1MTk4OTI3MTMsImV4cCI6MTU1MTQyODcxMywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSJ9._PWCLR7lgLmX3qA3gVnAhyGj-wt3WjDeNaml_tOunJM\"\n}",
           "type": "json"
         }
       ]
@@ -3093,7 +3157,7 @@
   {
     "type": "post",
     "url": "/user/changeAuth",
-    "title": "Enable/disable 2-factor authentication",
+    "title": "Change 2-factor authentication method",
     "name": "PostChangeAuth",
     "group": "User",
     "header": {
@@ -3114,10 +3178,10 @@
         "Parameter": [
           {
             "group": "Parameter",
-            "type": "Boolean",
+            "type": "Int",
             "optional": false,
             "field": "doubleAuth",
-            "description": "<p>If true, enable 2-factor authentication.</p>"
+            "description": "<p>If 1, enable 2-factor authentication by mail, if 2, enable 2-factor authentication by Google Authenticator.</p>"
           }
         ]
       }
@@ -3544,10 +3608,10 @@
           },
           {
             "group": "Parameter",
-            "type": "Boolean",
+            "type": "Int",
             "optional": true,
             "field": "doubleAuth",
-            "description": "<p>If true, enable 2-factor authentication.</p>"
+            "description": "<p>If 1, enable 2-factor authentication by mail, if 2, enable 2-factor authentication by Google Authenticator.</p>"
           }
         ]
       }
