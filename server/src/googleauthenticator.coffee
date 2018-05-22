@@ -1,5 +1,5 @@
 ###
-@api 		{post} 		/generateQRcode		Get QR code
+@api 		{post} 		/GoogleAuthenticator/generateQRcode		Get QR code
 @apiName 	GetQRCodeGoogleAuthenticator
 @apiGroup 	GoogleAuthenticator
 

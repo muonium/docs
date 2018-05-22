@@ -1352,7 +1352,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/generateQRcode",
+    "url": "/GoogleAuthenticator/generateQRcode",
     "title": "Get QR code",
     "name": "GetQRCodeGoogleAuthenticator",
     "group": "GoogleAuthenticator",
