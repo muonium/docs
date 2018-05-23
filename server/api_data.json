@@ -2183,6 +2183,13 @@
             "optional": false,
             "field": "data.doubleAuthMethod",
             "description": "<p>1: by mail, 2: Google Auth.</p>"
+          },
+          {
+            "group": "Success 200 - doubleAuth",
+            "type": "String",
+            "optional": false,
+            "field": "data.username",
+            "description": "<p>Username</p>"
           }
         ],
         "Success 200 - wait": [

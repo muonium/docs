@@ -16,6 +16,7 @@
 @apiSuccess (Success 200 - doubleAuth) 	{String} data.cek	CEK.
 @apiSuccess (Success 200 - doubleAuth) 	{Int}    data.uid	UID.
 @apiSuccess (Success 200 - doubleAuth) 	{Int}    data.doubleAuthMethod	1: by mail, 2: Google Auth.
+@apiSuccess (Success 200 - doubleAuth) 	{String} data.username	Username
 
 @apiSuccess (Success 200 - wait)		{String} message	"wait". 2-factor authentication is enabled, credentials are valid but you need to send them again with code sent by mail. Mail was not sent because a mail has been already sent recently.
 @apiSuccess (Success 200 - wait) 		{Object} data
