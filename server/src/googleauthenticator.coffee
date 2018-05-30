@@ -5,6 +5,7 @@
 
 @apiParam   {String}    username 		Username.
 
+@apiSuccess (Success 200)   {String} 	 token               Current token.
 @apiSuccess (Success 200)   {Object}     data
 @apiSuccess (Success 200) 	{String}     data.QRcode         QR code image in base 64.
 @apiSuccess (Success 200) 	{String}     data.secretKey	     Secret key to register key in Google Authenticator.
@@ -30,6 +31,6 @@
         ]
     },
     "message": null,
-    "token": null
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1MTk4OTI3MTMsImV4cCI6MTU1MTQyODcxMywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSJ9._PWCLR7lgLmX3qA3gVnAhyGj-wt3WjDeNaml_tOunJM"
 }
 ###
