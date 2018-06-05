@@ -2349,6 +2349,13 @@ define({ "api": [
             "optional": false,
             "field": "data.uid",
             "description": "<p>UID.</p>"
+          },
+          {
+            "group": "Success 200 - Ok",
+            "type": "String",
+            "optional": false,
+            "field": "data.lang",
+            "description": "<p>User language.</p>"
           }
         ],
         "Success 200 - doubleAuth": [
@@ -2382,17 +2389,17 @@ define({ "api": [
           },
           {
             "group": "Success 200 - doubleAuth",
+            "type": "String",
+            "optional": false,
+            "field": "data.lang",
+            "description": "<p>User language.</p>"
+          },
+          {
+            "group": "Success 200 - doubleAuth",
             "type": "Int",
             "optional": false,
             "field": "data.doubleAuthMethod",
             "description": "<p>1: by mail, 2: Google Auth.</p>"
-          },
-          {
-            "group": "Success 200 - doubleAuth",
-            "type": "String",
-            "optional": false,
-            "field": "data.username",
-            "description": "<p>Username</p>"
           }
         ],
         "Success 200 - wait": [
@@ -2423,6 +2430,13 @@ define({ "api": [
             "optional": false,
             "field": "data.uid",
             "description": "<p>UID.</p>"
+          },
+          {
+            "group": "Success 200 - wait",
+            "type": "String",
+            "optional": false,
+            "field": "data.lang",
+            "description": "<p>User language.</p>"
           }
         ]
       }
@@ -2532,6 +2546,13 @@ define({ "api": [
             "optional": false,
             "field": "data.uid",
             "description": "<p>UID.</p>"
+          },
+          {
+            "group": "Success 200 - Ok",
+            "type": "Int",
+            "optional": false,
+            "field": "data.lang",
+            "description": "<p>User language.</p>"
           }
         ]
       }
