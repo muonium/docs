@@ -136,7 +136,7 @@
 ###
 
 ###
-@api 		{get} 		/upgrade/hasSubscriptionEnded 	Does the current offer has ended?
+@api 		{get} 		/upgrade/hasSubscriptionEnded 	Has the current offer ended?
 @apiName 	GetHasSubscriptionEnded
 @apiGroup 	Upgrade
 
