@@ -95,7 +95,7 @@
 @apiError 	(Error 401 - validate)		{String} message	"validate". Account is not validated but credentials are valid.
 @apiError 	(Error 401 - validate)		{Int}    data     UID.
 
-@apiError 	(Error 401 - badCode)		{String} message	"badCode". User exists but incorrect code.
+@apiError 	(Error 403 - badCode)		{String} message	"badCode". User exists but incorrect code.
 
-@apiError 	(Error 401 - badPass)		{String} message	"badPass". User exists but incorrect password.
+@apiError 	(Error 403 - badPass)		{String} message	"badPass". User exists but incorrect password.
 ###
