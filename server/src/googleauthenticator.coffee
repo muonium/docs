@@ -31,6 +31,9 @@
     "message": null,
     "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1MTk4OTI3MTMsImV4cCI6MTU1MTQyODcxMywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSJ9._PWCLR7lgLmX3qA3gVnAhyGj-wt3WjDeNaml_tOunJM"
 }
+
+@apiSuccess (Success 200 - wait)   {String} 	 token               Current token.
+@apiSuccess (Success 200 - wait)   {String} 	 message             "wait". Wait 30s before generating a new QR code.
 ###
 
 ###

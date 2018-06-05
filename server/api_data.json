@@ -1487,6 +1487,22 @@
             "field": "data.backupCodes",
             "description": "<p>10 backup codes.</p>"
           }
+        ],
+        "Success 200 - wait": [
+          {
+            "group": "Success 200 - wait",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>Current token.</p>"
+          },
+          {
+            "group": "Success 200 - wait",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>&quot;wait&quot;. Wait 30s before generating a new QR code.</p>"
+          }
         ]
       },
       "examples": [
